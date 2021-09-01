@@ -11,9 +11,11 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.screenshot;
 
 public class LuminorTest {
-
+    By currencyDropdown = By.xpath("(//div[@class=\"currency-select-inner\"])[1]");
+    By convertedText = By.xpath("(//input)[2]");
     @Test
     public void testLuminor() throws InterruptedException, IOException {
+
 
         FileInputStream fis = new FileInputStream("LuminorTest.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -28,12 +30,12 @@ public class LuminorTest {
         open("https://luminor.ee/currency-rates");
         $("input").waitUntil(visible, 20000);
 
-        $(By.xpath("(//div[@class=\"currency-select-inner\"])[1]")).click();
+        $(currencyDropdown).click();
         $(By.xpath(currencyPath)).click();
 
 
         $("input").setValue(amount).pressEnter();
-        String convertedAmount= $(By.xpath("(//input)[2]")).getValue();
+        String convertedAmount= $(convertedText).getValue();
 
         screenshot("my_file_name");
         System.out.println(convertedAmount);
