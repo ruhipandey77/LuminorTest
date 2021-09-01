@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="37475" started-at="2021-09-01T16:21:02 IST" finished-at="2021-09-01T16:21:40 IST">
+  <suite name="Default Suite" duration-ms="35482" started-at="2021-09-01T16:29:57 IST" finished-at="2021-09-01T16:30:33 IST">
     <groups>
     </groups>
-    <test name="LuminorTest" duration-ms="37475" started-at="2021-09-01T16:21:02 IST" finished-at="2021-09-01T16:21:40 IST">
+    <test name="LuminorTest" duration-ms="35482" started-at="2021-09-01T16:29:57 IST" finished-at="2021-09-01T16:30:33 IST">
       <class name="LuminorTest">
-        <test-method status="PASS" signature="testLuminor()[pri:0, instance:LuminorTest@2b9627bc]" name="testLuminor" duration-ms="37391" started-at="2021-09-01T16:21:03 IST" finished-at="2021-09-01T16:21:40 IST">
+        <test-method status="PASS" signature="testLuminor()[pri:0, instance:LuminorTest@6325a3ee]" name="testLuminor" duration-ms="35389" started-at="2021-09-01T16:29:57 IST" finished-at="2021-09-01T16:30:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLuminor -->

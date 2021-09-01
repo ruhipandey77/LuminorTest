@@ -23,19 +23,19 @@ public class LuminorTest {
         String amount = Double.toString(amountDouble);
 
         String currency = sheet.getRow(1).getCell(0).getStringCellValue();
-        String xPath = "(//button[text()='" + currency + "'])[1]";
+        String currencyPath = "(//button[text()='" + currency + "'])[1]";
 
         open("https://luminor.ee/currency-rates");
         $("input").waitUntil(visible, 20000);
 
         $(By.xpath("(//div[@class=\"currency-select-inner\"])[1]")).click();
-        $(By.xpath(xPath)).click();
+        $(By.xpath(currencyPath)).click();
 
 
         $("input").setValue(amount).pressEnter();
-        String buy= $(By.xpath("(//input)[2]")).getValue();
+        String convertedAmount= $(By.xpath("(//input)[2]")).getValue();
 
         screenshot("my_file_name");
-        System.out.println(buy);
+        System.out.println(convertedAmount);
     }
 }
